@@ -1,0 +1,24 @@
+[versions]
+log4j = "2.20.0"
+junit-jupiter = "5.9.3"
+selenium = "4.9.1"
+
+[libraries]
+# Log4j
+log4j-core = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j" }
+log4j-jul = { group = "org.apache.logging.log4j", name = "log4j-jul", version.ref = "log4j" }
+log4j-slf4j = { group = "org.apache.logging.log4j", name = "log4j-slf4j-impl", version.ref = "log4j" }
+# JUnit 5 and assertions
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit-jupiter" }
+junit-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit-jupiter" }
+assertj = { group = "org.assertj", name = "assertj-core", version = "3.24.2" }
+# Selenium
+selenium-support = { group = "org.seleniumhq.selenium", name = "selenium-support", version.ref = "selenium" }
+selenium-chrome = { group = "org.seleniumhq.selenium", name = "selenium-chrome-driver", version.ref = "selenium" }
+selenium-firefox = { group = "org.seleniumhq.selenium", name = "selenium-firefox-driver", version.ref = "selenium" }
+selenium-safari = { group = "org.seleniumhq.selenium", name = "selenium-safari-driver", version.ref = "selenium" }
+
+[bundles]
+log4j = ["log4j-core", "log4j-jul", "log4j-slf4j"]
+junit = ["junit-jupiter", "junit-params"]
+selenium = ["selenium-support", "selenium-chrome", "selenium-firefox", "selenium-safari"]

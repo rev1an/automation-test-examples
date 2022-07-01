@@ -1,0 +1,26 @@
+group "${group}.core.ui"
+description "UI Core"
+
+configurations {
+    configureEach {
+       // exclude group: "junit", module: "junit"
+        exclude group: "org.seleniumhq.selenium", module: "selenium-manager"
+        exclude group: "io.opentelemetry", module: "opentelemetry-api"
+        exclude group: "io.opentelemetry", module: "opentelemetry-context"
+        exclude group: "io.opentelemetry", module: "opentelemetry-exporter-logging"
+        exclude group: "io.opentelemetry", module: "opentelemetry-sdk-common"
+        exclude group: "io.opentelemetry", module: "opentelemetry-sdk-extension-autoconfigure-spi"
+        exclude group: "io.opentelemetry", module: "opentelemetry-sdk-extension-autoconfigure"
+        exclude group: "io.opentelemetry", module: "opentelemetry-sdk-trace"
+        exclude group: "io.opentelemetry", module: "opentelemetry-sdk"
+        exclude group: "io.opentelemetry", module: "opentelemetry-semconv"
+    }
+}
+
+dependencies {
+    // Include Core project
+    api projects.core
+
+    // Add Selenium on top
+    api libs.bundles.selenium
+}

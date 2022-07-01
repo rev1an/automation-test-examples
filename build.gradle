@@ -1,0 +1,10 @@
+subprojects {
+    apply plugin: "java-library"
+
+    group "com.github.rev1an"
+    version "0.1"
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_16
+    }
+}

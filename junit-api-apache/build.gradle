@@ -1,0 +1,6 @@
+group "${group}.junit.api.apache"
+description "JUnit API Tests with Apache HttpClient"
+
+dependencies {
+    implementation projects.junitCore
+}

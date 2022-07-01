@@ -1,0 +1,20 @@
+group "${group}.junit.ui.selenium"
+description "JUnit UI Tests with Selenium"
+
+dependencies {
+    implementation projects.coreUi
+}
+
+test {
+    useJUnitPlatform()
+
+    systemProperties = [
+            "java.util.logging.manager"                                : "org.apache.logging.log4j.jul.LogManager",
+            "junit.jupiter.extensions.autodetection.enabled"           : "true",
+            "junit.jupiter.execution.parallel.enabled"                 : "true",
+            "junit.jupiter.execution.parallel.config.strategy"         : "custom",
+            "junit.jupiter.execution.parallel.config.custom.class"     : "com.github.rev1an.core.junit.engine.FixedParallelExecutionConfigurationStrategy",
+            "junit.jupiter.execution.parallel.config.fixed.parallelism": "2",
+    ]
+
+}
