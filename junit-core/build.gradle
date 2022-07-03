@@ -1,0 +1,8 @@
+group "${group}.junit.core"
+description "JUnit Extensions and Utilities"
+
+dependencies {
+    api projects.core
+    api libs.bundles.junit
+    api libs.assertj
+}

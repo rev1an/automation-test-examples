@@ -1,1 +1,16 @@
-rootProject.name = 'automation-test-examples'
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "automation-test-examples"
+
+include "core",
+        "junit-core",
+        "junit-api-apache",
+        "junit-api-okhttp",
+        "junit-api-restassured"
+
+// https://docs.gradle.org/current/userguide/dependency_management.html#sub:centralized-repository-declaration
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
