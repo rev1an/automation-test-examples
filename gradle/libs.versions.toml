@@ -1,6 +1,7 @@
 [versions]
 log4j = "2.17.2"
 junit-jupiter = "5.8.2"
+selenium = "4.3.0"
 
 [libraries]
 log4j-core = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j" }
@@ -9,7 +10,11 @@ log4j-slf4j = { group = "org.apache.logging.log4j", name = "log4j-slf4j-impl", v
 assertj = { group = "org.assertj", name = "assertj-core", version = "3.23.1" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit-jupiter" }
 junit-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit-jupiter" }
+selenium-support = { group = "org.seleniumhq.selenium", name = "selenium-support", version.ref = "selenium" }
+selenium-chrome = { group = "org.seleniumhq.selenium", name = "selenium-chrome-driver", version.ref = "selenium" }
+selenium-firefox = { group = "org.seleniumhq.selenium", name = "selenium-firefox-driver", version.ref = "selenium" }
 
 [bundles]
 log4j = ["log4j-core", "log4j-jul", "log4j-slf4j"]
 junit = ["junit-jupiter", "junit-params"]
+selenium = ["selenium-support", "selenium-chrome", "selenium-firefox"]

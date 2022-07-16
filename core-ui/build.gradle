@@ -1,0 +1,7 @@
+group "${group}.core.ui"
+description "Framework UI Core"
+
+dependencies {
+    api projects.junitCore
+    api libs.bundles.selenium
+}
