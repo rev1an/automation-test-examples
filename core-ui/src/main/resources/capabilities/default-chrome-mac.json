@@ -1,0 +1,11 @@
+{
+  "org.openqa.selenium.chrome.ChromeOptions": {
+    "pageLoadStrategy": "eager",
+    "goog:chromeOptions": {
+      "args": [
+        "window-size=1600,900",
+        "enable-automation"
+      ]
+    }
+  }
+}

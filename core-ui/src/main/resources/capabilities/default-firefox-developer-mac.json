@@ -1,0 +1,12 @@
+{
+  "org.openqa.selenium.firefox.FirefoxOptions": {
+    "pageLoadStrategy": "eager",
+    "moz:firefoxOptions": {
+      "binary": "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox",
+      "log": "info",
+      "args": [
+        "--window-size=1600,900"
+      ]
+    }
+  }
+}
