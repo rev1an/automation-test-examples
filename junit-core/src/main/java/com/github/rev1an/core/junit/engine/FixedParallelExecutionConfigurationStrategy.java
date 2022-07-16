@@ -12,24 +12,24 @@ import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfigura
 import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfigurationStrategy;
 
 /**
- * A simple extension for JUnit default {@link DefaultParallelExecutionConfigurationStrategy#DYNAMIC} with only aim
+ * A simple extension for JUnit default {@link DefaultParallelExecutionConfigurationStrategy#FIXED} with only aim
  * is to log parallelism settings.
  * <p>
  * To enable, pass properties:
  * <pre>
  * junit.jupiter.execution.parallel.config.strategy=custom
- * junit.jupiter.execution.parallel.config.custom.class=com.github.rev1an.core.junit.engine.DynamicParallelExecutionConfiguration
+ * junit.jupiter.execution.parallel.config.custom.class=com.github.rev1an.core.junit.engine.FixedParallelExecutionConfigurationStrategy
  * </pre>
  *
  * @author rev1an (Sergey Alekseev)
  * @see ParallelExecutionConfigurationStrategy
- * @see DefaultParallelExecutionConfigurationStrategy#DYNAMIC
+ * @see DefaultParallelExecutionConfigurationStrategy#FIXED
  */
-public class DynamicParallelExecutionConfiguration extends LoggedParallelExecutionConfigurationStrategy {
+public class FixedParallelExecutionConfigurationStrategy extends LoggedParallelExecutionConfigurationStrategy {
 
     @Override
     public ParallelExecutionConfiguration createConfiguration(ConfigurationParameters configurationParameters) {
-        return log(DefaultParallelExecutionConfigurationStrategy.DYNAMIC.createConfiguration(configurationParameters));
+        return log(DefaultParallelExecutionConfigurationStrategy.FIXED.createConfiguration(configurationParameters));
     }
 
 }
