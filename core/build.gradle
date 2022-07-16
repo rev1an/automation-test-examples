@@ -3,4 +3,6 @@ description "Framework Core"
 
 dependencies {
     api libs.bundles.log4j
+
+    api group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "2.13.3"
 }
