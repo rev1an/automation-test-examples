@@ -15,3 +15,6 @@ gen
 # driver binaries
 chromedriver
 geckodriver
+
+# no static junit-platform.properties
+junit-platform.properties
