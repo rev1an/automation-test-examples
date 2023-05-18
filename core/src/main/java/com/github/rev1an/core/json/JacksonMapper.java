@@ -6,12 +6,13 @@
 
 package com.github.rev1an.core.json;
 
+import java.io.UncheckedIOException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Expanding {@link ObjectMapper} with additional behaviour.
- *
- * @author rev1an (Sergey Alekseev)
  */
 public class JacksonMapper extends ObjectMapper {
 
@@ -34,6 +35,14 @@ public class JacksonMapper extends ObjectMapper {
     @Override
     public JacksonMapper copy() {
         return new JacksonMapper(this);
+    }
+
+    public JsonNode asJsonNode(String content) {
+        try {
+            return super.readTree(content);
+        } catch (JsonProcessingException e) {
+            throw new UncheckedIOException(e);
+        }
     }
 
 }
