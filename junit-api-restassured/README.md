@@ -5,6 +5,10 @@ and [JUnit 5 Extensions](https://junit.org/junit5/docs/current/user-guide/#exten
 
 ## Running
 
-- TBD
+- Simply execute 
+```shell
+./gradlew :junit-api-restassured:test
+```
+or use IDE of your choice.
 
 See [build.gradle](build.gradle) for more details.

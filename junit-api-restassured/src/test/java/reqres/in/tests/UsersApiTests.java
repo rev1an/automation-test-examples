@@ -10,6 +10,7 @@ import com.github.rev1an.core.json.JacksonMapper;
 import com.github.rev1an.core.junit.annotation.HttpConfig;
 import com.github.rev1an.core.junit.extension.JacksonParameterResolver;
 import com.github.rev1an.core.junit.extension.RequestSpecificationParameterResolver;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Order;
@@ -65,7 +66,8 @@ public class UsersApiTests {
                .then()
                .statusCode(200)
                .body("page", Matchers.is(1))
-               .body("data.collect { it.avatar }", Matchers.everyItem(Matchers.matchesRegex("^https://reqres.in/img/faces/.*$"))); // GPath
+               .body("data.collect { it.avatar }", Matchers.everyItem(Matchers.matchesRegex("^https://reqres.in/img/faces/.*$"))) // GPath
+               .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schema/reqres/in/test_listUsers.json"));
     }
 
     private boolean postNotCreated() {
