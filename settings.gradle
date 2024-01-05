@@ -3,16 +3,19 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "automation-test-examples"
 
 include "core",
-        "core-ui",
+        "core-selenium",
+        "core-playwright",
         "junit-core",
         "junit-api-apache",
         "junit-api-okhttp",
         "junit-api-restassured",
-        "junit-ui-selenium"
+        "junit-ui-selenium",
+        "junit-ui-playwright"
 
 // https://docs.gradle.org/current/userguide/dependency_management.html#sub:centralized-repository-declaration
 dependencyResolutionManagement {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 }

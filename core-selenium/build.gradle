@@ -1,5 +1,5 @@
-group "${group}.core.ui"
-description "UI Core"
+group "${group}.selenium.ui"
+description "Selenium Core"
 
 configurations {
     configureEach {

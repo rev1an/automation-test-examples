@@ -1,4 +1,4 @@
-# UI Core
+# Selenium Core
 
 Additional layer with Selenium dependencies and utility code.
 

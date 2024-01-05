@@ -1,9 +1,9 @@
-group "${group}.junit.ui.selenium"
-description "JUnit UI Tests with Selenium"
+group "${group}.junit.ui.playwright"
+description "JUnit UI Tests with Playwright Java"
 
 dependencies {
     implementation projects.junitCore
-    implementation projects.coreSelenium
+    implementation projects.corePlaywright
 }
 
 test {

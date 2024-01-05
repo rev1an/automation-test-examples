@@ -1,0 +1,9 @@
+group "${group}.playwright.ui"
+description "Playwright Core"
+
+dependencies {
+    // Include Core project
+    api projects.core
+
+    api libs.playwright
+}
